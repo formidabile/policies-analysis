@@ -50,35 +50,3 @@ print('Classifier has been fitted.')
 # Сохранение модели
 from joblib import dump
 dump(best_clf, 'best_clf_1.joblib')
-
-# test_df = pd.read_csv('test.csv', encoding='utf-8', sep=',')
-# X_test = test_df.drop(columns=['Result'])
-# y_test = test_df.Result
-#
-# # загрузка модели
-# from joblib import load
-# clf = load('best_clf.joblib')
-#
-# print('Validation of fitted model...')
-#
-# # Валидация модели
-# from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix
-# from sklearn.model_selection import cross_val_score
-#
-# y_pred = best_clf.predict(X_test)
-# acc = round(max(cross_val_score(best_clf, X_test, y_test, cv=5)), 4)
-# prec = round(precision_score(y_test, y_pred), 4)
-# rec = round(recall_score(y_test, y_pred), 4)
-# f1 = round(f1_score(y_test, y_pred), 4)
-# cm = confusion_matrix(y_test, y_pred)
-# with open('validation.txt', 'w') as file:
-#     file.write(f'True positive: {cm[0][0]}\n'
-#                f'False positive: {cm[1][0]}\n'
-#                f'False negative: {cm[0][1]}\n'
-#                f'True negative: {cm[1][1]}\n'
-#                f'Accuracy: {acc}\n'
-#                f'Precision: {prec}\n'
-#                f'Recall: {rec}\n'
-#                f'F1: {f1}')
-#
-# print('Validation has been done successfully.')
